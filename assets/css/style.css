@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: font;
+    src: url(../font/Open_Sans/OpenSans_Condensed-Regular.ttf)
+}
+
+@font-face {
+    font-family: font2;
+    src: url(../font/Playfair_Display/PlayfairDisplay-Regular.ttf);
+}
+
+body {
+    font-family: "font";
+    color: white;
+    font-size: 1.5em;
+
+    width: 100%;
+    /* background-color: #041737; */
+
+background-color:rgba(103,136,242,1) ;
+
+}
+h2{ font-family: "font2";}
+.hamburger{ display: none;}
+nav{ height: 60px;}
+.logo{ cursor: pointer;}
+.logo img { height: 70%;}
+.logo span { text-transform: uppercase;}
+.logo img {animation:rotate 2s linear infinite }
+@keyframes rotate{ from { transform: rotate(0deg);}
+to { transform: rotate(360deg);}}
+
+a {
+    text-decoration: none;
+}
+
+
+ .navigation { 
+   
+    /* background: rgb(4,44,93);
+    background: linear-gradient(90deg, rgba(4,44,93,1) 0%, rgba(5,113,209,1) 33%, rgba(9,94,219,1) 75%); */
+    background: rgb(4,39,93);
+    background: linear-gradient(90deg, rgba(4,39,93,1) 0%, rgba(103,136,242,1) 48%);
+display: flex;
+    position: sticky;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 1%;
+}
+
+.navigation ul {
+    display: flex;
+    justify-content: center;}
+
+
+.navigation ul li {
+    list-style: none;
+}
+
+.navigation ul li a {
+    color: white;
+    padding: 0 1rem;
+}
+
+.navigation ul li a:hover {
+    background-color: orangered;
+    padding: 0.2rem;
+    border-radius: 5px;
+    border: none;
+}
+
+
+#showcase {
+    background: url(./assets/image/image1.jpg) no-repeat center center/cover;
+
+    position: relative;
+    
+    height: 100%
+}
+#showcase img{
+    width: 100%;
+}
+
+ #showcase .showcasecontent {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    height: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    left: 0;
+    padding-left: 60px;
+    font-size: 1.4em;
+
+    gap: 5px;
+}
+
+h1 {
+    font-family: "font2"
+}
+
+span {
+    color: orangered;
+}
+
+ #showcase .btn {
+    background-color: orangered;
+    color: white;
+
+margin-right: 86%;
+    padding: 0.2rem 2rem;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+
+
+
+#about h2 { padding: 2% 24rem; 
+}
+
+#about .me{ 
+    display: flex;
+    
+    justify-content: space-around;
+
+}
+#about .text { width: 50%;}
+
+       
+        #project { display: flex;
+            flex-direction: column;
+        
+    justify-content: center;
+    align-items: center;
+gap:2%;}
+
+#project p {
+margin-bottom: 2%;
+}
+#project a { 
+    padding:5px ;
+    border-radius: 5px;
+    border: 2px solid orangered;
+    color: orangered;
+    
+
+}
+
+#project a:hover{ background-color: orangered;
+    color: white;
+    
+}
+
+
+
+.projects {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 4%;
+    justify-content: center;
+    justify-items: center;
+   
+}
+.projects img{ 
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+#project h2{ 
+margin-top: 2%;}
+#skills { width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+justify-items: center;
+text-align: center;
+gap: 2%;
+margin-top: 10%;}
+.languages img { width: 70%;}
+.languages { 
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 4%;
+    justify-content: center;
+    justify-items: center;
+    margin: 4% 0;
+}
+
+ #contact{ 
+    width: 100%;
+    background-color: orangered;
+   padding: 2% 0;
+   text-align: center;
+ }
+ #contact span { color: rgba(103,136,242,1);}
+
+ #contact form { display: flex;
+flex-direction: column;
+gap: 5px;}
+.form-group input { width: 60%;
+height: 40px; border-radius: 5px;
+border: none;
+  }
+  
+
+button { width: 60%;
+    
+    margin:0 auto;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    }
+textarea{ width: 60%; border-radius: 5px; border: none;
+}
+.footer { background-color: rgba(103,136,242,1);
+    font-size: 0.8em;
+padding: 1% 0;
+display: flex;
+justify-content: center;
+justify-items: center;
+}
+
+ 
+.back 
+{ 
+
+position: fixed;
+bottom: 15px;
+right: 15px;
+padding: 10px;
+background-color: orangered;
+border: none;
+border-radius: 5px;}
+
+.back a{ color: white;}
+@media screen and (max-width: 1024px){
+body{ font-size: 1.1em;}
+nav {height: 40px;}
+#showcase .btn{ margin-right: 78%;}
+
+}
+
+
+
+@media screen and (max-width:767px){ 
+body{ font-size:0.9em ;}
+h2{ font-size: 1.2em;}
+h1{ font-size: 1.1em;}
+nav { height: 30px}
+.logo img{ height: 50%;
+object-fit: cover;}
+#showcase .showcasecontent{
+    padding-left: 15px;
+}
+#showcase .btn{ 
+    margin-right: 70%;
+    
+}
+#about h2{ text-align: center;
+padding:2% 0;}
+
+#about .me {display: grid;
+    grid-template-columns: 50% 35%;
+    gap: 2%;
+    }
+    #about .text { width: 100%}
+    #about img { width: 100%;}
+    .projects { display: grid;
+    grid-template-columns: 95%;
+gap:1%}
+.projects img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+#project p {
+    margin: 3% 0;
+}
+#project a{ padding: 3px}
+#skills { 
+    margin-top: 10%;
+}
+.languages{
+    display: grid;
+    grid-template-columns: 45% 45%;
+}
+.languages img{ width: 90%;}
+#skills p{ 
+    margin-top: 3%;
+}
+.chart img{ 
+    width: 90%;
+    object-fit: cover;
+}
+
+
+}
+@media screen and ( max-width:575px){ body{ 
+    font-size: 0.8em;
+    
+}
+#showcase .btn{ margin-right: 65%; ;}
+.projects img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;}
+.menu  { display: none;}
+.hamburger{ display: flex;
+flex-direction: column;
+
+cursor: pointer;
+width: 30px;
+gap:3px;
+margin-right: 10px;}
+.hamburger span { width: 100%;
+height: 3px;
+background-color: orangered;
+transition: 0.5s;
+}
+.menu-toggle{ display: none;}
+.menu-toggle:checked ~ .menu{display: flex; }
+.menu{ display: flex; 
+position: absolute;
+top: 25px;
+right: 0px;
+width:100%;
+flex-direction: column;
+align-items: end;
+
+
+}
+}
+
+
+
+
+       
+
+
